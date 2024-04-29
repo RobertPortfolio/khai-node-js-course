@@ -2,21 +2,22 @@
   "name": "nodejs-course",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "node --watch src/index.js",
+    "migration:generate": "drizzle-kit generate:pg",
+    "migration:push": "drizzle-kit push:pg"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/RobertPortfolio/khai-node-js-course.git"
-  },
-  "author": "",
+  "author": "maksym bychok",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/RobertPortfolio/khai-node-js-course/issues"
-  },
-  "homepage": "https://github.com/RobertPortfolio/khai-node-js-course#readme",
   "dependencies": {
-    "express": "^4.18.2"
+    "body-parser": "^1.20.2",
+    "drizzle-orm": "^0.30.9",
+    "express": "^4.18.2",
+    "pg": "^8.11.5"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^0.20.17"
   }
 }
